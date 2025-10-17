@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             QuestBasicComposable_038Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
+                    TataletakBoxColumnRow(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
