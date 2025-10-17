@@ -23,7 +23,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-// [cite: 2]
 @Composable
 fun TataletakColumn(modifier: Modifier = Modifier) {
     Column(modifier = modifier.padding(top = 20.dp, start = 20.dp, end = 20.dp)) {
@@ -34,7 +33,6 @@ fun TataletakColumn(modifier: Modifier = Modifier) {
     }
 }
 
-// [cite: 2]
 @Composable
 fun TataletakRow(modifier: Modifier = Modifier) {
     Row(
@@ -48,7 +46,6 @@ fun TataletakRow(modifier: Modifier = Modifier) {
     }
 }
 
-// [cite: 2]
 @Composable
 fun TataletakBox(modifier: Modifier = Modifier) {
     Box(
@@ -64,7 +61,6 @@ fun TataletakBox(modifier: Modifier = Modifier) {
     }
 }
 
-// [cite: 2]
 @Composable
 fun TataletakColumnRow(modifier: Modifier = Modifier) {
     Column {
@@ -125,49 +121,48 @@ fun TataletakRowColom(modifier: Modifier = Modifier) {
 
 @Composable
 fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
-    // Pastikan kamu punya gambar 'notasibalok.png' (atau .jpg) di folder res/drawable
     val gambar = painterResource(id = R.drawable.notasibalok) //
 
-    Column(modifier = modifier) { // [cite: 12]
-        Column { // [cite: 13]
-            Row( // [cite: 4]
+    Column(modifier = modifier) {
+        Column {
+            Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
-                Text(text = "Col1 Row1 Komponen1") // [cite: 4]
-                Text(text = "Col1 Row1 Komponen2") // [cite: 4]
-                Text(text = "Col1 Row1 Komponen3") // [cite: 4]
+                Text(text = "Col1 Row1 Komponen1")
+                Text(text = "Col1 Row1 Komponen2")
+                Text(text = "Col1 Row1 Komponen3")
             }
-            Row( // [cite: 4]
+            Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
-                Text(text = "Col1 Row2 Komponen1") // [cite: 4]
-                Text(text = "Col1 Row2 Komponen2") // [cite: 4]
-                Text(text = "Col1 Row2 Komponen3") // [cite: 4]
+                Text(text = "Col1 Row2 Komponen1")
+                Text(text = "Col1 Row2 Komponen2")
+                Text(text = "Col1 Row2 Komponen3")
             }
         }
-        Spacer(modifier = Modifier.height(height = 10.dp)) // [cite: 15, 16]
-        Box( // [cite: 17]
+        Spacer(modifier = Modifier.height(height = 10.dp))
+        Box(
             modifier = Modifier
-                .fillMaxWidth() // [cite: 19]
-                .height(500.dp) // [cite: 20, 25]
-                .background(color = Color.Cyan), // [cite: 21, 26]
-            contentAlignment = Alignment.Center // [cite: 22, 27]
+                .fillMaxWidth()
+                .height(500.dp)
+                .background(color = Color.Cyan),
+            contentAlignment = Alignment.Center
         ) {
-            Image( // [cite: 28]
+            Image(
                 painter = gambar,
-                contentDescription = null, // [cite: 29]
-                contentScale = ContentScale.Fit // [cite: 30, 31]
+                contentDescription = null,
+                contentScale = ContentScale.Fit
             )
-            Text( // [cite: 32]
-                text = "My Mostan", // [cite: 32]
-                fontSize = 50.sp, // [cite: 33]
-                color = Color.Red, // [cite: 34]
-                fontWeight = FontWeight.Bold, // [cite: 35]
-                fontFamily = FontFamily.Cursive, // [cite: 36]
-                modifier = Modifier.align(Alignment.Center) // [cite: 37, 38]
+            Text(
+                text = "My Mostan",
+                fontSize = 50.sp,
+                color = Color.Blue,
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Cursive,
+                modifier = Modifier.align(Alignment.Center)
             )
-        } // [cite: 24]
-    } // [cite: 14]
+        }
+    }
 }
