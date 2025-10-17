@@ -23,6 +23,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+// [cite: 2]
 @Composable
 fun TataletakColumn(modifier: Modifier = Modifier) {
     Column(modifier = modifier.padding(top = 20.dp, start = 20.dp, end = 20.dp)) {
@@ -33,6 +34,7 @@ fun TataletakColumn(modifier: Modifier = Modifier) {
     }
 }
 
+// [cite: 2]
 @Composable
 fun TataletakRow(modifier: Modifier = Modifier) {
     Row(
@@ -46,6 +48,7 @@ fun TataletakRow(modifier: Modifier = Modifier) {
     }
 }
 
+// [cite: 2]
 @Composable
 fun TataletakBox(modifier: Modifier = Modifier) {
     Box(
@@ -61,6 +64,7 @@ fun TataletakBox(modifier: Modifier = Modifier) {
     }
 }
 
+// [cite: 2]
 @Composable
 fun TataletakColumnRow(modifier: Modifier = Modifier) {
     Column {
@@ -72,58 +76,5 @@ fun TataletakColumnRow(modifier: Modifier = Modifier) {
             Text(text = "Komponen2Baris1")
             Text(text = "Komponen3Baris1")
         }
-    }
-}
-
-@Composable
-fun TataletakCustomRow(modifier: Modifier = Modifier) {
-    Column {
-        // Baris 1
-        Row(
-            modifier = modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceEvenly
-        ) {
-            Text(text = "Komponen1Baris1")
-            Text(text = "Komponen2Baris1")
-            Text(text = "Komponen3Baris1")
-        }
-        // Baris 2
-        Row(
-            modifier = modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceEvenly
-        ) {
-            Text(text = "Komponen1Baris2")
-            Text(text = "Komponen2Baris2")
-            Text(text = "Komponen3Baris2")
-        }
-    }
-}
-
-@Composable
-fun TataletakRowColom(modifier: Modifier = Modifier) {
-    Row(
-        modifier = modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceEvenly
-    ) {
-        Column {
-            Text(text = "Komponen1Kolom1")
-            Text(text = "Komponen2Kolom1")
-            Text(text = "Komponen3Kolom1")
-        }
-        Column {
-            Text(text = "Komponen1Kolom2")
-            Text(text = "Komponen2Kolom2")
-            Text(text = "Komponen3Kolom2")
-        }
-    }
-}
-
-@Composable
-fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
-    // Pastikan kamu punya gambar 'notasibalok.png' (atau .jpg) di folder res/drawable
-    val gambar = painterResource(id = R.drawable.notasibalok)
-
-    Column(modifier = modifier) {
-        // Nanti diisi
     }
 }
