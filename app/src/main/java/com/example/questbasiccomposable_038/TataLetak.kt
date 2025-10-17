@@ -102,3 +102,72 @@ fun TataletakCustomRow(modifier: Modifier = Modifier) {
         }
     }
 }
+
+//
+@Composable
+fun TataletakRowColom(modifier: Modifier = Modifier) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
+        Column {
+            Text(text = "Komponen1Kolom1")
+            Text(text = "Komponen2Kolom1")
+            Text(text = "Komponen3Kolom1")
+        }
+        Column {
+            Text(text = "Komponen1Kolom2")
+            Text(text = "Komponen2Kolom2")
+            Text(text = "Komponen3Kolom2")
+        }
+    }
+}
+
+@Composable
+fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
+    // Pastikan kamu punya gambar 'notasibalok.png' (atau .jpg) di folder res/drawable
+    val gambar = painterResource(id = R.drawable.notasibalok) //
+
+    Column(modifier = modifier) { // [cite: 12]
+        Column { // [cite: 13]
+            Row( // [cite: 4]
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+                Text(text = "Col1 Row1 Komponen1") // [cite: 4]
+                Text(text = "Col1 Row1 Komponen2") // [cite: 4]
+                Text(text = "Col1 Row1 Komponen3") // [cite: 4]
+            }
+            Row( // [cite: 4]
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+                Text(text = "Col1 Row2 Komponen1") // [cite: 4]
+                Text(text = "Col1 Row2 Komponen2") // [cite: 4]
+                Text(text = "Col1 Row2 Komponen3") // [cite: 4]
+            }
+        }
+        Spacer(modifier = Modifier.height(height = 10.dp)) // [cite: 15, 16]
+        Box( // [cite: 17]
+            modifier = Modifier
+                .fillMaxWidth() // [cite: 19]
+                .height(500.dp) // [cite: 20, 25]
+                .background(color = Color.Cyan), // [cite: 21, 26]
+            contentAlignment = Alignment.Center // [cite: 22, 27]
+        ) {
+            Image( // [cite: 28]
+                painter = gambar,
+                contentDescription = null, // [cite: 29]
+                contentScale = ContentScale.Fit // [cite: 30, 31]
+            )
+            Text( // [cite: 32]
+                text = "My Mostan", // [cite: 32]
+                fontSize = 50.sp, // [cite: 33]
+                color = Color.Red, // [cite: 34]
+                fontWeight = FontWeight.Bold, // [cite: 35]
+                fontFamily = FontFamily.Cursive, // [cite: 36]
+                modifier = Modifier.align(Alignment.Center) // [cite: 37, 38]
+            )
+        } // [cite: 24]
+    } // [cite: 14]
+}
